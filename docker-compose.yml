@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  ppt_gallary:
+    build: .
+    volumes:
+      - .:/work
