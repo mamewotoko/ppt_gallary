@@ -4,4 +4,5 @@ services:
   ppt_gallary:
     build: .
     volumes:
-      - .:/work
+      - .:/home/user/work
+#    user: ${USER}

@@ -1,8 +1,11 @@
-FROM ubuntu:17.04
+FROM libreoffice/online:master
 
 RUN apt-get update
 RUN apt-get install unoconv -y
-RUN mkdir /work
 RUN apt-get install gv -y
-WORKDIR /work
 
+RUN useradd -m user
+ADD to_png.sh /home/user
+RUN mkdir /home/user/work
+WORKDIR /home/user/work
+USER user
